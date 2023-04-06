@@ -1,0 +1,222 @@
+@import "./footer", "./header", "./variable";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $family;
+}
+body {
+  background-color: $bg-color;
+
+}
+
+main {
+  max-width: 100%;
+  margin: 40px auto 0;
+  .container-section{
+    max-width: 85;
+  }
+}
+.services {
+  width: 100%;
+  gap: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+  
+
+  div {
+    padding: 2rem;
+    color: $primary-color;
+    &:not(:first-child) {
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    h1 {
+      margin-top: 0;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+  }
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto !important;
+
+
+  .main-section {
+    position: relative;
+    
+    .banner-section {
+      img.banner-section__image {
+        width: 100%;
+        height: auto;
+      }
+    
+      &:hover + .body-section {
+        display: flex;
+        opacity: 1;
+        transition: all 1s;
+        background-color: rgba(0, 0, 0, 0.5);
+
+      }
+    }
+    
+    .body-section {
+      z-index: 20;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between ;
+      align-items: center;
+      height: 90%;
+      width: 100%;
+      opacity: 1;
+      // background-color: rgba(0, 0, 0, 0.5);
+      transition: all 1s;
+      color: #fff;
+     
+    
+      .body-section__heading {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        color: $bg-color;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+      }
+    
+      .body-section__button {
+        display: inline-block;
+        background-color: $secondary-color;
+        color: $bg-color;
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+        width: 50%;
+        cursor: pointer;
+        
+        &:hover {
+          background-color: $primary-color;
+          color: #fff;
+        }
+      }
+    }
+  }
+  
+  
+  
+  .call-to-action {
+    background-color: $secondary-color;
+    color: $bg-color;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem 0 2rem;
+    border-radius: 5px;
+  
+    .call-to-action__heading {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  
+    .call-to-action__paragraph {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+  
+    .call-to-action__button {
+      display: inline-block;
+      background-color: $bg-color;
+      color: $primary-color;
+      padding: 0.5rem 1rem;
+      font-size: 1.2rem;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #d4e9d2;
+      }
+    }
+  }
+}  
+//page contact
+
+.contact{
+  display: grid;
+  place-items: center;
+  background-image: url("../images/plante1.png");
+  // Define styles for the contact form
+  h1{
+    color: $primary-color;
+  }
+  p{
+    margin-top: 12px;
+    color: $primary-color;
+    width: 60%;
+    text-align: center;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0 2rem;
+    padding: 2rem;
+    background-color: white;
+    width: 40%;
+    box-shadow: 0px 1px 14px #89898979;
+    border-radius: 5px;
+    
+  
+    // Define styles for the labels of the contact form
+    label {
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      align-self: flex-start;
+      color: $primary-color;
+    }
+  
+    // Define styles for the inputs of the contact form
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 0.5rem;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 1rem;
+      width: 100%;
+      background-color: $bg-color;
+      box-shadow: 0px 0px 4px rgba(0, 255, 115, 0.11);
+    }
+  
+    // Define styles for the submit button of the contact form
+    button[type="submit"] {
+      display: inline-block;
+      background-color: $secondary-color;
+      color: $bg-color;
+      padding: 0.5rem 1rem;
+      font-size: 1.2rem;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      border: none;
+      margin-top: 1rem;
+  
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
+  }
+}
